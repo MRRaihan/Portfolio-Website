@@ -9,24 +9,24 @@
                 </div>
                 <div class="col-11">
                     <h5>Email</h5>
-                    <p><a href="mailto:example@email.com"> mail@example.com</a></p>
-                    <p><a href="mailto:example1@email.com"> mail@example1.com</a></p>
+                    <p><a href="mailto:example@email.com"> mizanurcse1452@gmail.com</a></p>
+                    <p><a href="mailto:example1@email.com"> mizahur15-1452@diu.edu.bd</a></p>
                 </div>
                 <div class="col-1 pr-0 icon mt-4">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                 </div>
                 <div class="col-11 mt-4">
                     <h5>Phone</h5>
-                    <p> +112 367 896 2449</p>
-                    <p> +112 367 896 2449</p>
+                    <p> +88 017 4996 9029</p>
+                    <p> +88 013 1707 4747</p>
                 </div>
                 <div class="col-1 pr-0 icon mt-4">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                 </div>
                 <div class="col-11 mt-4">
                     <h5>Address</h5>
-                    <p>24H Main Block, 4th cross, California,</p>
-                    <p> California - 94203</p>
+                    <p>2/21, Bordhonari, Mirpur-1, Dhaka-1216</p>
+                    <p>Dhaka, Bangladesh</p>
                 </div>
             </div>
         </div>

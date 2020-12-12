@@ -7,7 +7,7 @@
                 <div id="owl-demo" class="owl-carousel">
                     <div class="item-owl">
                         <div class="test-image">
-                            <img src="images/test1.jpg" alt=" " class="img-fluid">
+                            <img src="{{asset('assets/frontend/images/mizanur.jpg')}}" alt=" " class="img-fluid">
                         </div>
                         <div class="test-review">
                             <h5>Henry mark</h5>
@@ -17,7 +17,7 @@
                     </div>
                     <div class="item-owl">
                         <div class="test-image">
-                            <img src="images/test1.jpg" alt=" " class="img-fluid">
+                            <img src="{{asset('assets/frontend/images/mizanur.jpg')}}" alt=" " class="img-fluid">
                         </div>
                         <div class="test-review">
                             <h5>Smith joe</h5>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="item-owl">
                         <div class="test-image">
-                            <img src="images/test1.jpg" alt=" " class="img-fluid">
+                            <img src="{{asset('assets/frontend/images/mizanur.jpg')}}" alt=" " class="img-fluid">
                         </div>
                         <div class="test-review">
                             <h5>Steave john</h5>
