@@ -25,6 +25,14 @@
                 </ul>
             </li>
 
+            <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect"><i class="ti-menu"></i> <span>  Homepage </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
+                <ul class="list-unstyled">
+                    <li><a href="{{route('homepage.index')}}">Homepage List</a></li>
+                    <li><a href="{{route('homepage.create')}}">Create New Homepage</a></li>
+                </ul>
+            </li>
+
         </ul>
     </div>
     <div class="clearfix"></div>
