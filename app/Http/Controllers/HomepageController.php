@@ -14,7 +14,9 @@ class HomepageController extends Controller
      */
     public function index()
     {
-        //
+        $data['homepages'] = Homepage::orderBy('created_at', 'DESC')->paginate(20);
+        $data['serial'] = 1;
+        return view('admin.homepage.index', $data);
     }
 
     /**
@@ -24,7 +26,7 @@ class HomepageController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.homepage.create');
     }
 
     /**
@@ -35,7 +37,32 @@ class HomepageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'title'=>'required',
+            'description'=>'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:8192',
+            'status' => 'required',
+
+        ]);
+
+        if ($request->hasFile('image')){
+            $file = $request->file('image');
+            $path ='images/homepage';
+            $file_name = time() . $file->getClientOriginalName();
+            $file->move($path, $file_name);
+            $data['image']= $path.'/'. $file_name;
+
+        }
+
+        $data['name'] = $request->name;
+        $data['title'] = $request->title;
+        $data['description'] = $request->description;
+        $data['status'] = $request->status;
+
+        Homepage::create($data);
+        session()->flash('success', 'Homepage Create Successfully');
+        return redirect()->route('homepage.index');
     }
 
     /**
@@ -57,7 +84,8 @@ class HomepageController extends Controller
      */
     public function edit(Homepage $homepage)
     {
-        //
+        $data['homepage']=$homepage;
+        return view('admin.homepage.edit', $data);
     }
 
     /**
@@ -69,7 +97,35 @@ class HomepageController extends Controller
      */
     public function update(Request $request, Homepage $homepage)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'title'=>'required',
+            'description'=>'required',
+            'image' => 'image|mimes:jpeg,png,jpg|max:8192',
+            'status' => 'required',
+
+        ]);
+
+        if ($request->hasFile('image')){
+            $file = $request->file('image');
+            $path ='images/homepage';
+            $file_name = time() . $file->getClientOriginalName();
+            $file->move($path, $file_name);
+            $data['image']= $path.'/'. $file_name;
+
+            if (file_exists($homepage->image)){
+                unlink($homepage->image);
+            }
+        }
+
+        $data['name'] = $request->name;
+        $data['title'] = $request->title;
+        $data['description'] = $request->description;
+        $data['status'] = $request->status;
+
+        $homepage->update($data);
+        session()->flash('success', 'Homepage Update Successfully');
+        return redirect()->route('homepage.index');
     }
 
     /**
@@ -80,6 +136,15 @@ class HomepageController extends Controller
      */
     public function destroy(Homepage $homepage)
     {
-        //
+        if($homepage){
+            if(file_exists(($homepage->image))){
+                unlink($homepage->image);
+            }
+
+            $homepage->delete();
+            session()->flash('success', 'Homepage deleted successfully');
+        }
+
+        return redirect()->route('homepage.index');
     }
 }
