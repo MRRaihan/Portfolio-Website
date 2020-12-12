@@ -26,7 +26,7 @@ Auth::routes([
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::group(['prefix'=>'admin'],function (){
+Route::group(['prefix'=>'admin', 'middleware'=>'auth'],function (){
     Route::get('dashboard','DashboardController@dashboard')->name('admin.dashboard');
     Route::resource('user','UserController');
 });
