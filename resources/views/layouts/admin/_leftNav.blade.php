@@ -20,8 +20,8 @@
             <li class="has_sub">
                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-user"></i> <span> Users </span> <span class="pull-right"><i class="mdi mdi-plus"></i></span></a>
                 <ul class="list-unstyled">
-                    <li><a href="#">User List</a></li>
-                    <li><a href="#">Create new User</a></li>
+                    <li><a href="{{route('user.index')}}">User List</a></li>
+                    <li><a href="{{route('user.create')}}">Create new User</a></li>
                 </ul>
             </li>
 
