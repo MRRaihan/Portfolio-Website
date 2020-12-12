@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes([
     'register' => false, // Registration Routes...
@@ -24,6 +21,9 @@ Auth::routes([
 ]);
 
 /*Route::get('/home', 'HomeController@index')->name('home');*/
+
+
+Route::get('/', 'HomeController@index')->name('home');
 
 
 Route::group(['prefix'=>'admin', 'middleware'=>'auth'],function (){
