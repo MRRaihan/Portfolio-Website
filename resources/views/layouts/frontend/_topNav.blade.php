@@ -25,7 +25,7 @@
                 <a class="nav-link scroll" href="#services">Services</a>
             </li>
             <li class="nav-item mr-lg-4">
-                <a class="nav-link scroll" href="#experience">Experience</a>
+                <a class="nav-link scroll" href="#experience">Skill</a>
             </li>
             <li class="dropdown nav-item mr-lg-4">
                 <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle ">
