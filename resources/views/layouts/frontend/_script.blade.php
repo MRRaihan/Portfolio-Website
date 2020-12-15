@@ -56,3 +56,8 @@
 </script>
 <!-- //here ends scrolling icon -->
 <!-- start-smoth-scrolling -->
+<script>
+    setTimeout(function() {
+        $('.loader_bg').fadeToggle();
+    }, 5000);
+</script>

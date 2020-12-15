@@ -6,6 +6,13 @@
 
 <body>
 <header>
+<div class="loader_bg">
+    <div class="loader">
+
+    </div>
+</div>
+</header>
+<header>
     <div class="container">
        <!-- nav -->
        @include('layouts.frontend._topNav')
